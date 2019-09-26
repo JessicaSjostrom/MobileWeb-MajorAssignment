@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- Assignment 3 -->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	<link rel="stylesheet" href="_css/jquery.mobile.css">
+	<link rel="stylesheet" href="_css/mystyles.css">
+	<link rel="stylesheet" href="_css/mytheme.min.css">
+	<link rel="stylesheet" href="_css/jquery.mobile.icons.min.css">
+	<link rel="stylesheet" href="_css/mytheme.css">	
+	
+	<script src="_js/jquery.js"></script>
+	<script src="_js/jquery.mobile.js"></script>
+	<script src="_js/myscript.js"></script>
+	
+</head>
+<body>
+<!-- page id="jsonOut" -->
+	<div data-role="page" id="jsonOut" data-theme="a">
+		<!-- Create header -->
+		<header data-role="header">
+			<h1><span class="title"></span></h1>
+		</header>
+		
+		<!-- Create main content page -->
+		<section class="ui-content" role="main" style="text-align: center;">
+			<p class="title2">Weather</p>
+			
+			<table id="mainTable">
+			</table>
+			
+			<!-- Create link for Panels-->
+			<a href="#panelWind" class="ui-btn ui-icon-wind ui-btn-icon-right">Wind Info</a>
+			<a href="#panelAtmosphere" class="ui-btn ui-icon-atmosphere ui-btn-icon-right">Atmosphere Info</a>
+			<a href="#panelAstronomy" class="ui-btn ui-icon-astronomy ui-btn-icon-right">Astronomy Info</a>
+			
+			<!-- Links to other pages -->
+			<a href="#forecastCollapse" class="ui-btn ui-icon-forecast ui-btn-icon-right">Forecast</a>
+			<a href="#dataEntry" class="ui-btn ui-icon-data ui-btn-icon-right">Data Entry</a>
+			<a href="#localStorage" class="ui-btn ui-icon-storage ui-btn-icon-right" data-rel="dialog" data-transition="pop">Local Storage</a>			
+			
+		</section>		
+
+		<!-- Create footer -->
+		<footer data-role="footer">
+		<div id="foot">
+			<a href="#about" 
+					class="ui-btn ui-icon-me ui-btn-icon-top" data-rel="dialog" data-transition="pop"><span class="title">About Me</span></a>
+			<a href="http://www.google.com" target="_blank"	class="ui-btn ui-icon-google ui-btn-icon-top"><span class="title">Google</span></a>
+		</div>
+		</footer>
+				
+		<!-- Create wind panel -->
+		<div id="panelWind" data-role="panel" data-position="left">
+			<h3>Wind Info</h3>
+			<table id="windTable">
+			</table>
+		</div>
+		
+		<!-- Create atmosphere panel -->
+		<div id="panelAtmosphere" data-role="panel" data-position="left">
+			<h3>Atmosphere Info</h3>
+			<table id="atmosphereTable">
+			</table>
+		</div>
+		
+		<!-- Create astronomy panel -->
+		<div id="panelAstronomy" data-role="panel" data-position="left">
+			<h3>Astronomy Info</h3>
+			<table id="astronomyTable">
+			</table>
+		</div>
+	</div>
+<!-- End of jsonOut -->
+
+<!-- page id=forecastCollapse -->
+	<div data-role="page" id="forecastCollapse">
+		<!-- Create header -->
+		<header data-role="header">
+			<h1><span class="title"></span></h1>
+		</header>	
+	
+		<!-- Create main content page -->
+		<section class="ui-content" role="main">
+			<a href="#jsonOut" class="ui-btn ui-icon-back ui-btn-icon-left">Back to Main</a>
+			
+			<!-- Create a collapsible-set using ID forecastList -->
+			<div id="forecastList" data-role="collapsible-set">
+			</div>
+			
+		</section>
+	
+		<!-- Create footer -->
+		<footer data-role="footer">
+		<div id="foot">
+			<a href="#about" 
+					class="ui-btn ui-icon-me ui-btn-icon-top" data-rel="dialog" data-transition="pop"><span class="title">About Me</span></a>
+			<a href="http://www.google.com" target="_blank"	class="ui-btn ui-icon-google ui-btn-icon-top"><span class="title">Google</span></a>
+		</div>
+		</footer>
+	</div>
+<!-- end of page id=forecastCollapse -->
+
+<!-- start of dataEntry -->
+	<!-- Create header -->
+	<div data-role="page" id="dataEntry">
+		<header data-role="header">
+			<h1><span class="title"></span></h1>
+		</header>
+		
+		<!-- Create main content page -->
+		<section class="ui-content" role="main">
+			<a href="#jsonOut" class="ui-btn ui-icon-back ui-btn-icon-left">Back to Main</a>
+			<form id="cssComments">
+				<label for="lemail">Email: </label>
+				<input name="lemail" type="text" value="sjostrom@sheridancollege.ca">
+				
+				<label for="lcity">City:
+				 <select name="lcity"cc>
+				  <option value="Toronto">Toronto</option>
+				  <option value="Brampton">Brampton</option>
+				  <option value="Oakville">Oakville</option>
+				</select> 
+				
+				<label for="lcomments">Comments:
+				<input name="lcomments" type="text" value="">
+				
+				<hr>
+				<button class="ui-btn" id="submit">Submit To Local Storage</button>
+			</form>
+		</section>
+		
+		<!-- Create footer -->
+		<footer data-role="footer">
+		<div id="foot">
+			<a href="#about" 
+					class="ui-btn ui-icon-me ui-btn-icon-top"><span class="title" data-rel="dialog" data-transition="pop">About Me</span></a>
+			<a href="http://www.google.com" target="_blank"	class="ui-btn ui-icon-google ui-btn-icon-top"><span class="title">Google</span></a>
+		</div>
+		</footer>
+	</div>		
+<!-- end of dataEntry -->
+
+<!-- start of localStorage -->
+	<!-- Create header -->
+	<div data-role="page" id="localStorage">
+		
+		<!-- Create popup content page -->
+		<section class="ui-content" role="main">
+			<a href="#jsonOut" class="ui-btn ui-icon-back ui-btn-icon-left">Back to Main</a>
+
+			<div class="ui-content" role="main" data-theme="b">	
+				<h3 id="ls">Local storage </h3>
+				<form>
+					<label for="comOut">Last comment/question:</label>
+					<input type="text" id="comOut" name="comOut">
+				</form>
+			</div>
+		</section>
+	</div>		
+<!-- end of localStorage -->
+
+<!-- start of about -->
+	<!-- Create header -->
+	<div data-role="page" id="about">
+		
+		<!-- Create popup content page -->
+		<section class="ui-content" role="main">
+			<a href="#jsonOut" class="ui-btn ui-icon-back ui-btn-icon-left">Back to Main</a>
+
+			<div class="ui-content" role="main" data-theme="b">	
+				<table id="aboutMe">
+				</table>
+			</div>
+		</section>
+	</div>
+	
+<!-- end of localStorage -->
+
+
+</body>
+</html>

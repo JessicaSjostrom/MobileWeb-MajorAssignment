@@ -1,0 +1,60 @@
+		th {color: rebeccapurple; font-weight: bold; font-size: 120%;}
+		td {color: rebeccapurple;} 
+		
+		.title {font-size: 1.5em; font-weight: bold; color: white; font-weight: bold;}
+		.title2 {font-size: 1.5em; font-weight: bold; color: rebeccapurple; font-weight: bold;}
+		.footer {font-size: 1.5em; font-weight: bold; color: white; font-weight: bold;}
+		
+		input[type="radio"]{
+			vertical-align: middle;
+		}
+		
+		#mainTable {
+			margin: auto;
+			width: 50%;
+		}
+		
+		#cssComments {
+			margin: auto;
+			width: 50%;
+		}
+		
+		.ui-icon-me:after {
+			background-image: url("images/me.jpg");
+			background-size: 25px 25px;
+		}
+		
+		.ui-icon-google:after {
+			background-image: url("images/google.jpg");
+			background-size: 25px 25px;
+		}
+		
+		.ui-icon-wind:after {
+			background-image: url("images/wind.png");
+			background-size: 25px 25px;
+		}
+
+		.ui-icon-atmosphere:after {
+			background-image: url("images/atmosphere.png");
+			background-size: 25px 25px;
+		}
+
+		.ui-icon-astronomy:after {
+			background-image: url("images/astronomy.png");
+			background-size: 25px 25px;
+		}		
+		
+		.ui-icon-forecast:after {
+			background-image: url("images/forecast.png");
+			background-size: 25px 25px;
+		}	
+		
+		.ui-icon-data:after {
+			background-image: url("images/data.jpg");
+			background-size: 25px 25px;
+		}	
+		
+		.ui-icon-storage:after {
+			background-image: url("images/storage.jpg");
+			background-size: 25px 25px;
+		}	
